@@ -16,3 +16,11 @@ Run powershell as an administrator
 
 Check the installed version of the Az module  
 ```Get-InstalledModule -Name Az -AllVersions | Select-Object -Property Name, Version```
+
+
+- Connect to your Azure account
+
+```Connect-Az```
+
+View your VM resources
+```Get-AzVM```

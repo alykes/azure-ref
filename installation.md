@@ -24,3 +24,6 @@ Check the installed version of the Az module
 
 View your VM resources
 ```Get-AzVM```
+
+Command reference  
+https://docs.microsoft.com/en-us/powershell/module/

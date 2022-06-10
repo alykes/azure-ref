@@ -11,7 +11,7 @@ $authHeader = @{
 #$body = @'
 #{
 #    "subscriptions": [
-#        "${SubscriptionID}"
+#        ${SubscriptionID}
 #    ],
 #    "query": "Resources | project name, type | limit 10"
 #}

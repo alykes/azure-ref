@@ -21,7 +21,7 @@ $ResourceGroups = Get-AzResourceGroup
 
 foreach ($ResourceGroup in $ResourceGroups)
 {
-    Write-Verbose ("Found Resource Group: " + $ResourceGroup.ResourceGroupName)
+    Write-Host ("Found Resource Group: " + $ResourceGroup.ResourceGroupName)
 
     $Resources = Get-AzResource -ResourceGroupName $ResourceGroup.ResourceGroupName
 
@@ -44,6 +44,7 @@ foreach ($ResourceGroup in $ResourceGroups)
         $restUri = "https://management.azure.com/subscriptions/"+$SubscriptionID+"/resourceGroups/"+$Resource.ResourceGroupName+"/providers/Microsoft.AppConfiguration/configurationStores/"+$Resource.Name+"?api-version=2022-05-01"
         $response = Invoke-RestMethod -Uri $restUri -Method $APIMethod -Headers $authHeader
 
+        echo $response
         }
 
     }
